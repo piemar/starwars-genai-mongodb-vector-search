@@ -1,7 +1,9 @@
 
 # Star Wars Face Recognition App
-
 This application uses a React frontend to allow users to take a selfie and send it to a Python Flask backend. The backend utilizes the `face_recognition` library to encode the faces and interacts with MongoDB to store and retrieve character data.
+
+<img src="starwars-frontend/public/starwars-face-recognition.png" width="50%" height="50%">
+
 
 ## Prerequisites
 
