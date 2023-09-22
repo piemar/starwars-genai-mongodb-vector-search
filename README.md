@@ -23,7 +23,7 @@ This application is a distinctive and entertaining platform that allows users to
 
 ### Matching Process
 1. **Vector Search**: Once the faces are encoded, the application performs a vector search to find the StarWars character with the most similar facial features.
-2. **Result Presentation**: After processing, the application swiftly presents the user with the StarWars character they most resemble, enhancing user satisfaction.
+2. **Result Presentation**: After processing, the application swiftly presents the user with the StarWars character they most resemble.
 
 ## Technologies Used
 - **Frontend**: React
@@ -34,11 +34,6 @@ This application is a distinctive and entertaining platform that allows users to
 
 ## Potential Use Cases
 This application is not just a source of entertainment but can also serve as a reference or starting point for developers looking to integrate face recognition and vector search in their projects. It can be used as an educational tool for those interested in learning about the integration of different technologies to create a cohesive application.
-
-
-## Getting Started
-To explore the application and its features, or to contribute to its development, please refer to the instructions provided in the repository's README file. Whether you're a StarWars aficionado or a tech enthusiast keen on exploring innovative applications, we invite you to delve into the world of StarWars Look-a-Like Finder!
-
 
 ## Prerequisites
 
@@ -55,14 +50,15 @@ To explore the application and its features, or to contribute to its development
 1. Update the `MONGO_URI` in the Flask application flask_server.py with your MongoDB URI.
 2. If using MongoDB Atlas, make sure to whitelist your IP address in the Network Access settings.
 
-### Set up the Backend and create encodings for images
+### Set up the Backend and create vectors for images using `face_recognition` Python library
 Navigate to the backend directory and install the required Python packages:
 
 ```sh
 cd starwars-backend
 pip install -r requirements.txt
 python flask_server.py
-# Only run the encode-characters the first time you setup, as it will generate vectors for all starwars_characters_images
+# Only run the encode-characters the first time you setup, as it will generate vectors for all starwars_characters_images 
+# and store them in a MongoDB namepspace: starwars.characters
 curl -X POST http://127.0.0.1:5000/encode-characters -H "Content-Type: application/json" -d '{"path": "starwars_characters_images"}'
 ```
 
