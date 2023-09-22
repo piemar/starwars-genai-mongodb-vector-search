@@ -119,3 +119,6 @@ curl -X POST http://127.0.0.1:5000/encode-characters -H "Content-Type: applicati
 
 ## Conclusion
 The StarWars Look-a-Like Finder is a captivating application that combines modern technologies to provide users with an amusing way to find their StarWars twin. Its user-friendly interface, advanced face recognition capabilities, and efficient database interactions ensure that users receive accurate and swift results, making it an exciting and educational platform for StarWars fans and tech enthusiasts alike.
+
+- [DB Rankings Vector Databases](https://db-engines.com/en/ranking/vector+dbms/all)
+
