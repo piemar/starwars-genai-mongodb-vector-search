@@ -4,7 +4,7 @@
 <img src="starwars-frontend/public/starwars-face-recognition.png" width="50%" height="50%">
 
 ## Overview
-This application is a distinctive and entertaining platform that allows users to discover which StarWars character they resemble the most, utilizing advanced vector search and face recognition technologies. It integrates the robustness of a React-based frontend, MongoDB Atlas Vector Search, and Python Face Recognition API to offer a seamless and enjoyable user experience.
+This application is a distinctive and entertaining that allows users to discover which StarWars character they resemble the most, utilizing advanced vector search and face recognition technologies. It integrates the robustness of a React-based frontend, MongoDB Atlas Vector Search, and Python Face Recognition API to offer a seamless and enjoyable user experience.
 
 ## Detailed Workflow
 ### Frontend
@@ -12,8 +12,8 @@ This application is a distinctive and entertaining platform that allows users to
 2. **Responsive Design**: Ensures optimal viewing and interaction experience across a wide range of devices, from desktops to mobile phones.
 
 ### Backend
-1. **Python Face Recognition**: The backend is powered by the renowned Python face_recognition library, which analyzes the uploaded images and encodes the faces for comparison.
-2. **MongoDB Integration**: The application communicates with MongoDB to efficiently store and retrieve the necessary character data, ensuring the scalability and performance of the application.
+1. **Python Face Recognition**: The backend is powered by the renowned Python face_recognition library, which analyzes the uploaded images and encodes(creating vectors) the faces for comparison.
+2. **MongoDB Integration**: The application communicates with MongoDB to efficiently store the vectors in MongoDB collection, and ruses Atlas Vector Search to find the character thats most similar to the uploaded selfie picture.
 
 ### Matching Process
 1. **Vector Search**: Once the faces are encoded, the application performs a vector search to find the StarWars character with the most similar facial features.
@@ -33,7 +33,7 @@ This application is not just a source of entertainment but can also serve as a r
 
 - Node.js and npm: [Download and Install](https://nodejs.org/en/download/)
 - Python 3: [Download and Install](https://www.python.org/downloads/)
-- MongoDB Atlas: A MongoDB Atlas Cluster Created
+- A MongoDB Atlas Cluster Created: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
 
 ## Getting Started
 
@@ -51,10 +51,15 @@ Navigate to the backend directory and install the required Python packages:
 cd starwars-backend
 pip install -r requirements.txt
 python flask_server.py
-# Only run the encode-characters the first time you setup, as it will generate vectors for all starwars_characters_images 
-# and store them in a MongoDB namepspace: starwars.characters
+```
+
+Only run the encode-characters the first time you setup, as it will generate vectors for all starwars_characters_images 
+and store them in a MongoDB namepspace: starwars.characters
+
+```sh
 curl -X POST http://127.0.0.1:5000/encode-characters -H "Content-Type: application/json" -d '{"path": "starwars_characters_images"}'
 ```
+
 
 ### Create Atlas Search Index
 Create Atlas Search index, on database starwars and collection characters using the JSON config and lappy below config
