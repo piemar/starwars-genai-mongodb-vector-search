@@ -6,12 +6,6 @@
 ## Overview
 This application is a distinctive and entertaining platform that allows users to discover which StarWars character they resemble the most, utilizing advanced vector search and face recognition technologies. It integrates the robustness of a React-based frontend, MongoDB Atlas Vector Search, and Python Face Recognition API to offer a seamless and enjoyable user experience.
 
-## Features
-1. **User-Friendly Interface**: Built with React, the application provides an intuitive interface, allowing users to effortlessly upload their selfies.
-2. **Advanced Face Recognition**: Employs Python's face_recognition library to accurately encode and compare facial features, ensuring precise results.
-3. **Vector Search Capability**: Uses MongoDB Atlas Vector Search to determine the most resembling StarWars character, providing fast and efficient matching.
-4. **Robust Database Interaction**: Seamlessly interacts with MongoDB to securely store and retrieve character data, maintaining the integrity and reliability of the application.
-
 ## Detailed Workflow
 ### Frontend
 1. **React-based User Interface**: Enables users to interact with the application in a user-friendly manner, uploading their selfies with minimal hassle.
