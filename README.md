@@ -1,7 +1,8 @@
 
 # Star Wars Face Recognition App
-This application uses a React frontend to allow users to upload a selfie and send it to a Python Flask backend. The backend utilizes the `face_recognition` library to encode the faces and interacts with MongoDB to store and retrieve character data.
+This application uses a React frontend to allow user uploads a selfie and the application will use Vector search to decide which Starwars character you look the most like, Powered by MongoDB Atlas Vector Search and Python Face Recognition API. The backend utilizes the python `face_recognition` library to encode the faces and interacts with MongoDB to store and retrieve character data.
 
+Frontend: React
 <img src="starwars-frontend/public/starwars-face-recognition.png" width="50%" height="50%">
 
 
@@ -17,7 +18,7 @@ This application uses a React frontend to allow users to upload a selfie and sen
 
 #### Backend
 
-1. Update the 'MONGO_URI' in the Flask application flask_server.py with your MongoDB URI.
+1. Update the `MONGO_URI` in the Flask application flask_server.py with your MongoDB URI.
 2. If using MongoDB Atlas, make sure to whitelist your IP address in the Network Access settings.
 
 ### Set up the Backend and create encodings for images
@@ -32,7 +33,7 @@ curl -X POST http://127.0.0.1:5000/encode-characters -H "Content-Type: applicati
 ```
 
 ### Create Atlas Search Index
-Create Atlas Search index, on database starwars and collection characters using the JSON config and appy bellow config
+Create Atlas Search index, on database starwars and collection characters using the JSON config and lappy below config
 ```json
 {
     "mappings": {
