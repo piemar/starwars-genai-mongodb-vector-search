@@ -2,7 +2,7 @@
 # Star Wars Face Recognition App
 This application uses a React frontend to allow user uploads a selfie and the application will use Vector search to decide which Starwars character you look the most like, Powered by MongoDB Atlas Vector Search and Python Face Recognition API. The backend utilizes the python `face_recognition` library to encode the faces and interacts with MongoDB to store and retrieve character data.
 
-Frontend: React
+
 <img src="starwars-frontend/public/starwars-face-recognition.png" width="50%" height="50%">
 
 
