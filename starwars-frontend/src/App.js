@@ -22,10 +22,7 @@ function App() {
         setCharacters(response.data);
       }).catch((error) => {
         console.error('Error fetching data: ', error);
-      });
-      //const encoding = response.data.encoding;
-      // Perform the necessary MongoDB query using the received encoding.
-      
+      });      
     } catch (error) {
       console.error("Encoding failed", error);
     }
@@ -34,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Star Wars Face Recognition</h1>
+        <h1>Star Wars Look-a-Like Finder</h1>
         <input type="file" ref={fileInputRef} accept="image/*" capture="user" />
         <button onClick={handleCapture}>Capture &amp; Encode</button>
         {characters.map((character) => (
