@@ -1,10 +1,10 @@
 
-# StarWars GenAI Look-a-Like Finder
+# StarWars Look-a-Like Finder
 
 <img src="starwars-frontend/public/starwars-face-recognition.png" width="50%" height="50%">
 
 ## Overview
-This application is a distinctive and entertaining that allows users to discover which StarWars character they resemble the most, utilizing advanced vector search and GenAI face recognition technologies. It integrates the robustness of a React-based frontend, MongoDB Atlas Vector Search, and Python Face Recognition API to offer a seamless and enjoyable user experience.
+This application is a distinctive and entertaining that allows users to discover which StarWars character they resemble the most, utilizing advanced vector search and face recognition technologies. It integrates the robustness of a React-based frontend, MongoDB Atlas Vector Search, and Python Face Recognition API to offer a seamless and enjoyable user experience.
 
 ## Detailed Workflow
 ### Frontend

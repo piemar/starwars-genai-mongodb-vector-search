@@ -47,8 +47,8 @@ def encode_characters():
     return jsonify({'status': 'success'}), 200
 
 
-@app.route('/encode-selfie', methods=['POST'])
-def encode_selfie():
+@app.route('/match-selfie', methods=['POST'])
+def match_selfie():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
     
